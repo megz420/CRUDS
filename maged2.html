@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cruds</title>
+    <link rel="stylesheet" href="css maged.css">
+    <link rel="script" href="cruds.JS">
+   <style>
+  
+  
+</style>
+</head>
+<body>
+   <div id="container">
+   <div id="head" >
+<h1>CRUDS</h1>
+</div>
+
+<p>PRODUCT MANAGMENT SYSTEM<p>
+<div class="input">
+<input id="add0" placeholder="title" type="text" class="inp1">
+
+
+<input onkeyup="sum()" id="add1" placeholder="price" class="inp" type="number">
+<input onkeyup="sum()" id="add2" placeholder="taxes" class="inp"  type="number"> 
+<input onkeyup="sum()" id="add3" placeholder="ads" class="inp"  type="number"> 
+<input onkeyup="sum()" id="add4" placeholder="discount" class="inp"  type="number"> 
+<small id="dii" ></small>
+</div>
+
+
+<input min="1" max="100" id="add5" placeholder="count" class="inp1"  type="number"> 
+<input id="add6" placeholder="category" class="inp1"  type="text"> 
+
+<button onclick="create()" id="btn1">create</button>  
+<input onkeyup="search ()" id="add7" type="text" placeholder="search">
+<div class="search">
+<button onblur="create()" onclick="searchengine (this.id)" id="btn2"  >search by title</button> 
+<button onblur="create()" onclick="searchengine (this.id)" id="btn3"  >search by category</button> 
+</div>
+<button onclick="deleteall()" id="deleteal" class="btn4"> delete all <small id="adad" ></small></button>
+</div>
+<table>
+   <tr>
+      <th>ID</th>
+      <th>TITLE</th>
+      <th>PRICE</th>
+      <th>TAXES</th>
+      <th>ADS</th>
+      <th>DISCOUNT</th>
+      <th>TOTAL</th>
+      <th>CATEGORY</th>
+      <th>UBDATE</th>
+      <th>DELETE</th>
+   </tr>
+   <tbody id="titl" >
+    
+   </tbody>
+
+</table>
+
+
+<script src="cruds.JS"></script>
+</body>
+</html>
