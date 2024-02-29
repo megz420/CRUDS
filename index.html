@@ -4,23 +4,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cruds</title>
-    <link rel="stylesheet" href="css maged.css">
-    <link rel="script" href="cruds.JS">
+    <link rel="stylesheet" href="css maged_copy.css">
+    <link rel="script" href="cruds_copy.JS">
    <style>
   
   
 </style>
 </head>
 <body>
+   
+     <div id="invisible1">
    <div id="container">
-   <div id="head" >
+   <div id="head">
 <h1>CRUDS</h1>
 </div>
 
 <p>PRODUCT MANAGMENT SYSTEM<p>
 <div class="input">
-<input id="add0" placeholder="title" type="text" class="inp1">
-
+<input id="add0" placeholder="title" type="text" class="inp1" style="width: 77%;">
+<button onclick="invisible_1()" style="width: 20%;">new day</button>
 
 <input onkeyup="sum()" id="add1" placeholder="price" class="inp" type="number">
 <input onkeyup="sum()" id="add2" placeholder="taxes" class="inp"  type="number"> 
@@ -30,7 +32,8 @@
 </div>
 
 
-<input min="1" max="100" id="add5" placeholder="count" class="inp1"  type="number"> 
+<input min="1" max="100" id="add5" placeholder="count" class="inp1"  type="number"  style="width: 77%;"> 
+<button onclick="window.scroll(0,70000)" style="width: 20%;">total pudget </button> 
 <input id="add6" placeholder="category" class="inp1"  type="text"> 
 
 <button onclick="create()" id="btn1">create</button>  
@@ -39,8 +42,12 @@
 <button onblur="create()" onclick="searchengine (this.id)" id="btn2"  >search by title</button> 
 <button onblur="create()" onclick="searchengine (this.id)" id="btn3"  >search by category</button> 
 </div>
-<button onclick="deleteall()" id="deleteal" class="btn4"> delete all <small id="adad" ></small></button>
+
+<button style="background-color: brown;" onclick="yaaaa()" id="deleteal" class="btn4"> delete all <small id="adad" ></small></button>
+   <div id="yesyes" class="search btn4" >
+   <button style="background-color: brown;" onclick="deleteall()">sure</button><button style="background-color: green;" onclick="notsure()" >not sure</button></div>
 </div>
+
 <table>
    <tr>
       <th>ID</th>
@@ -51,16 +58,75 @@
       <th>DISCOUNT</th>
       <th>TOTAL</th>
       <th>CATEGORY</th>
-      <th>UBDATE</th>
-      <th>DELETE</th>
+      <th>UBDATE ITEM</th>
+      <th>SELL ITEM</th>
    </tr>
    <tbody id="titl" >
     
    </tbody>
 
 </table>
+<h2 id="total_removal">total = <small id="totalall"></small></h2>
+
+</div>
+<div style="width: 1000px;" id="invisible2" >
+   <div class="nav_bar_of_history" style="background:transparent ; display: flex; justify-content: space-around;">
+   <span style="font-size:30px ;">The prevuos days</span>
+   <button class="btn4" onclick="show_history()" id="button_for_hide" style="width: 30%;">hide</button>
+   <button onclick="hide_history()" id="button_for_view" style="width: 30%;">view</button>
+</div><br><br>
+
+<!--<div id="display_history" style="display: flex;font-size: larger;" >
+   <span>total price: <span id="history_price"></span></span>
+   <span>total price: <span id="history_price"></span></span>
+   <span>total discount: <span id="history_discount"></span></span>
+   <span>total money: <span id="history_money"></span></span>
+</div>-->
+<table id="hide_table_of_history" class="btn4">
+   <tr>
+      <th>DAY</th>
+      <th>TOTLA PRICE</th>
+      <th>TOTAL DISCOUNT</th>
+      <th>TOTAL GAIN</th>
+   </tr>
+   <tbody id="history_table" >
+    
+   </tbody>
+
+</table>
 
 
-<script src="cruds.JS"></script>
+
+   <h1>NEW DAY</h1>
+   <h2>today</h2><br>
+   <button onclick="invisible_2()">original home</button>
+   <table>
+       <tr>
+          <th>ID</th>
+          <th>TITLE</th>
+          <th>PRICE</th>
+          <th>TAXES</th>
+          <th>ADS</th>
+          <th>DISCOUNT</th>
+          <th>TOTAL</th>
+          <th>CATEGORY</th>
+          <th>BACK AGAIN</th>
+          
+       </tr>
+       <tbody id="title_of_new_day" >
+        
+       </tbody>
+    
+    </table>
+    <div id="testtese">
+    <h2 id="total_removal_new">total = <small id="totalall_new">0</small> <button style="width: 30%; font-size:large ;" id="delete_and_get_new_day" onclick="history_created()">finish and get new day</button></h2>
+   
+   </div>
+</div>
+
+
+
+
+<script src="cruds_copy.JS"></script>
 </body>
 </html>
