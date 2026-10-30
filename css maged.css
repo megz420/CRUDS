@@ -1,3 +1,5 @@
+
+/* Base page layout and shared text styling. */
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(29, 41, 66);
@@ -10,6 +12,7 @@ body{
    
 
 }
+/* Shared layout defaults for page sections and controls. */
 .container{
     width: 100%;
 }
@@ -18,6 +21,7 @@ div{
     border: 0px;
 }
 
+/* Form controls use dark backgrounds to contrast with the page. */
 input{
     height: 40px;
     width: 100%;
@@ -38,6 +42,7 @@ input{
     width: 20%;
     }
  
+/* The live product total is shown beside the numeric inputs. */
  #dii{
  width: 18%;
  padding: 7px;
@@ -47,6 +52,8 @@ background-color: brown;
  #dii::before{
 content: 'total:';
  }
+
+/* Primary action buttons and their hover feedback. */
  button{
     width: 100%;
     height: 40px;
@@ -64,7 +71,7 @@ content: 'total:';
     transition: 0.5s;
  }
 
-
+/* Search-mode buttons share a horizontal row. */
 .search{
     display: flex;
     justify-content: space-between;
@@ -72,6 +79,8 @@ content: 'total:';
 .search button{
     width: 40%;
 }
+
+/* Product, sold-item, and history tables. */
 table{
     width: 100%;
     text-align: center;
@@ -82,6 +91,8 @@ table{
 th,td{
     padding: 4px;
 }
+
+/* Utility class used by the script to hide controls and page sections. */
 .btn4{
 display: none;
 }
