@@ -1,18 +1,14 @@
 <html lang="en">
 <head>
+    <!-- Document metadata and the page's external stylesheet. -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cruds</title>
     <link rel="stylesheet" href="css maged_copy.css">
-    <link rel="script" href="cruds_copy.JS">
-   <style>
-  
-  
-</style>
 </head>
 <body>
-   
+    <!-- Main screen: product form, active-product table, and active total. -->
      <div id="invisible1">
    <div id="container">
    <div id="head">
@@ -21,6 +17,7 @@
 
 <p>PRODUCT MANAGMENT SYSTEM<p>
 <div class="input">
+<!-- Product fields use add0-add6 because cruds_copy.JS reads them by ID. -->
 <input id="add0" placeholder="title" type="text" class="inp1" style="width: 77%;">
 <button onclick="invisible_1()" style="width: 20%;">new day</button>
 
@@ -36,18 +33,22 @@
 <button onclick="window.scroll(0,70000)" style="width: 20%;">total pudget </button> 
 <input id="add6" placeholder="category" class="inp1"  type="text"> 
 
+<!-- create() creates records or saves the record currently being edited. -->
 <button onclick="create()" id="btn1">create</button>  
 <input onkeyup="search ()" id="add7" type="text" placeholder="search">
+<!-- The mode buttons select which product field search() checks. -->
 <div class="search">
 <button onblur="create()" onclick="searchengine (this.id)" id="btn2"  >search by title</button> 
 <button onblur="create()" onclick="searchengine (this.id)" id="btn3"  >search by category</button> 
 </div>
 
 <button style="background-color: brown;" onclick="yaaaa()" id="deleteal" class="btn4"> delete all <small id="adad" ></small></button>
+<!-- Confirmation controls are shown after selecting "delete all". -->
    <div id="yesyes" class="search btn4" >
    <button style="background-color: brown;" onclick="deleteall()">sure</button><button style="background-color: green;" onclick="notsure()" >not sure</button></div>
 </div>
 
+<!-- JavaScript renders active products into #titl. -->
 <table>
    <tr>
       <th>ID</th>
@@ -69,6 +70,7 @@
 <h2 id="total_removal">total = <small id="totalall"></small></h2>
 
 </div>
+<!-- Day view: sold products, running totals, and previous-day summaries. -->
 <div style="width: 1000px;" id="invisible2" >
    <div class="nav_bar_of_history" style="background:transparent ; display: flex; justify-content: space-around;">
    <span style="font-size:30px ;">The prevuos days</span>
@@ -76,12 +78,15 @@
    <button onclick="hide_history()" id="button_for_view" style="width: 30%;">view</button>
 </div><br><br>
 
-<!--<div id="display_history" style="display: flex;font-size: larger;" >
+<!-- Reserved example markup for a more detailed history summary:
+<div id="display_history" style="display: flex;font-size: larger;" >
    <span>total price: <span id="history_price"></span></span>
    <span>total price: <span id="history_price"></span></span>
    <span>total discount: <span id="history_discount"></span></span>
    <span>total money: <span id="history_money"></span></span>
-</div>-->
+</div>
+-->
+<!-- Previous-day summaries are rendered into #history_table. -->
 <table id="hide_table_of_history" class="btn4">
    <tr>
       <th>DAY</th>
@@ -96,7 +101,7 @@
 </table>
 
 
-
+   <!-- Finished/sold records are rendered into #title_of_new_day. -->
    <h1>NEW DAY</h1>
    <h2>today</h2><br>
    <button onclick="invisible_2()">original home</button>
@@ -125,8 +130,7 @@
 </div>
 
 
-
-
+<!-- Load last so the script can find the page elements and expose handlers. -->
 <script src="cruds_copy.JS"></script>
 </body>
 </html>
